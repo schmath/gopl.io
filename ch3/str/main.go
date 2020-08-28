@@ -59,7 +59,10 @@ func main() {
 	// 每个文字符号用1~4个字节表示。一个文字符号的首字节高位指明还有多少字节。
 	// 0xxxxxxx                            0~127          ASCII(1byte)
 	// 110xxxxx 10xxxxxx                   128~2047       <128(2byte)
-	// 1110xxxx 110xxxxx 10xxxxxx          2048~65535     <2048(3byte)
-	// 11110xxx 1110xxxx 110xxxxx 10xxxxxx 65536~0x10ffff <65535(4byte)
+	// 1110xxxx 10xxxxxx 10xxxxxx          2048~65535     <2048(3byte)
+	// 11110xxx 10xxxxxx 10xxxxxx 10xxxxxx 65536~0x10ffff <65535(4byte)
+	// 变长字符串无法按照下标直接访问第n个字符。
+
+	//
 
 }
